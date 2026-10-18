@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Політика конфіденційності | Severov Auto Group</title>
+<meta name="description" content="Політика конфіденційності Severov Auto Group: які персональні дані ми збираємо через форми на сайті, навіщо, скільки зберігаємо та як їх видалити.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.autogroup.top/polityka-konfidentsiynosti">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:site_name" content="Severov Auto Group">
+<meta property="og:title" content="Політика конфіденційності | Severov Auto Group">
+<meta property="og:description" content="Які дані ми збираємо через форми, навіщо, скільки зберігаємо та як їх видалити.">
+<meta property="og:url" content="https://www.autogroup.top/polityka-konfidentsiynosti">
+<meta property="og:image" content="https://www.autogroup.top/img/severov-logo.jpg">
+<link rel="icon" href="img/severov-logo.jpg">
+<link rel="apple-touch-icon" href="img/severov-logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#08090D;--graphite:#0F1218;--line:rgba(237,232,222,0.10);--bone:#EDE8DE;--slate:#8A8F9C;
+  --amber:#D8A44A;--gold-hi:#F3DCA6;--gold-lo:#B0832B;--teal:#C2CBD8;--chrome-hi:#F2F5F9;--chrome-lo:#79828F;
+  --maxw:1240px;--ease:cubic-bezier(.16,1,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--bone);font-family:'Onest',system-ui,sans-serif;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+::selection{background:var(--amber);color:var(--ink)}
+.metal-gold{background:linear-gradient(180deg,var(--gold-hi) 6%,var(--amber) 46%,var(--gold-lo) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--amber)}
+
+/* Nav */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .4s var(--ease),border-color .4s var(--ease);border-bottom:1px solid transparent}
+header.solid{background:rgba(8,9,13,0.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:12px;font-family:'Onest',sans-serif;font-weight:800;font-size:18px;letter-spacing:.04em}
+.brand .glyph{width:84px;height:33px;position:relative;flex:none;overflow:hidden;
+  -webkit-mask-image:radial-gradient(130% 150% at 50% 45%,#000 58%,transparent 100%);
+  mask-image:radial-gradient(130% 150% at 50% 45%,#000 58%,transparent 100%)}
+.brand .glyph img{position:absolute;width:94px;height:94px;left:-6px;top:-14px;mix-blend-mode:lighten;filter:contrast(1.08) saturate(1.05)}
+.brand small{display:block;font-family:'Onest',sans-serif;font-weight:400;font-size:9px;letter-spacing:.32em;color:var(--slate);margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:14px;color:var(--slate);transition:color .25s}
+.nav-links a:hover,.nav-links a[aria-current]{color:var(--bone)}
+/* селектор із .nav-links, бо інакше `.nav-links a` перебиває колір і текст стає сірим */
+.nav-links a.nav-cta,.nav-cta{font-weight:700;font-size:14px;color:#1A1206;
+  background:linear-gradient(135deg,var(--gold-hi) 0%,var(--amber) 46%,var(--gold-lo) 100%);
+  padding:11px 21px;border-radius:100px;
+  box-shadow:0 2px 14px rgba(216,164,74,.22), inset 0 1px 0 rgba(255,255,255,.38);
+  transition:transform .3s var(--ease),box-shadow .3s,filter .3s}
+.nav-links a.nav-cta:hover,.nav-cta:hover{color:#1A1206;transform:translateY(-2px);filter:brightness(1.07);
+  box-shadow:0 10px 30px rgba(216,164,74,.42), inset 0 1px 0 rgba(255,255,255,.5)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+.burger span{width:24px;height:2px;background:var(--bone)}
+
+.crumbs{padding:100px 0 0;font-family:'Onest',sans-serif;font-size:12px;color:var(--slate);letter-spacing:.06em}
+.crumbs a:hover{color:var(--amber)}
+.crumbs span{color:var(--amber)}
+
+/* Hero */
+.chero{padding:40px 0 70px;position:relative;overflow:hidden}
+.chero .g{position:absolute;width:760px;height:760px;right:-16%;top:-40%;border-radius:50%;
+  background:radial-gradient(circle,rgba(216,164,74,.12),transparent 62%);filter:blur(12px);pointer-events:none}
+.chero h1{position:relative;font-family:'Onest',sans-serif;font-weight:800;letter-spacing:-0.025em;line-height:1;
+  font-size:clamp(38px,6.6vw,88px);max-width:16ch}
+.chero p{position:relative;margin-top:24px;max-width:56ch;font-size:clamp(15px,1.6vw,19px);color:#c8cbd4}
+
+/* Контактні картки */
+.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:52px;position:relative}
+.ccard{border:1px solid var(--line);border-radius:18px;padding:26px;background:var(--graphite);
+  transition:transform .5s var(--ease),border-color .5s}
+.ccard:hover{transform:translateY(-5px);border-color:rgba(237,232,222,.24)}
+.ccard .lab{font-family:'Onest',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin-bottom:12px}
+.ccard .val{font-family:'Onest',sans-serif;font-weight:700;font-size:21px;line-height:1.25}
+.ccard .val a:hover{color:var(--amber)}
+.ccard .sub{color:var(--slate);font-size:14px;margin-top:8px}
+.ccard .ic{width:40px;height:40px;border-radius:11px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--amber);margin-bottom:18px}
+
+/* Офіс */
+.office{padding:110px 0;background:linear-gradient(180deg,var(--ink),#0b0d14)}
+.sec-tag{font-family:'Onest',sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:12px}
+.sec-tag::before{content:"";width:34px;height:1px;background:var(--amber)}
+.sec-title{font-family:'Onest',sans-serif;font-weight:800;letter-spacing:-0.02em;line-height:1.04;font-size:clamp(28px,4vw,50px);margin-top:18px}
+.office-shell{margin-top:48px;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--graphite)}
+.office-photo{position:relative}
+.office-photo img{width:100%;height:auto}
+.office-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(15,18,24,.9) 100%)}
+.office-body{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;padding:38px}
+.office-body h3{font-family:'Onest',sans-serif;font-weight:800;font-size:26px;margin-bottom:14px}
+.office-body p{color:var(--slate);font-size:15px;margin-bottom:14px}
+.hours{list-style:none;margin-top:6px}
+.hours li{display:flex;justify-content:space-between;gap:20px;padding:11px 0;border-bottom:1px solid var(--line);font-size:15px}
+.hours li span{color:var(--slate)}
+.hours li b{font-family:'Onest',sans-serif;font-weight:400;color:var(--bone)}
+.hours li.off b{color:var(--slate)}
+
+/* Карта */
+.mapsec{padding:110px 0;background:#0b0d14}
+.map-box{margin-top:44px;border:1px solid var(--line);border-radius:24px;overflow:hidden;
+  background:var(--graphite);line-height:0}
+.map-box iframe{width:100%;height:460px;border:0;display:block;
+  /* гугл-карта світла — притемнюємо під тему сайту, на наведення вертаємо оригінал */
+  filter:invert(90%) hue-rotate(180deg) saturate(.75) contrast(.92) brightness(.95);
+  transition:filter .45s var(--ease)}
+.map-box:hover iframe{filter:none}
+.map-foot{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:24px}
+.map-foot b{display:block;font-family:'Onest',sans-serif;font-weight:700;font-size:19px}
+.map-foot span{display:block;color:var(--slate);font-size:14px;margin-top:6px}
+.map-acts{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:640px){
+  .map-box iframe{height:340px}
+  .map-foot{flex-direction:column;align-items:flex-start}
+}
+
+/* Напрямки/послуги */
+.units{padding:110px 0;background:#0b0d14}
+.unit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+.unit{border:1px solid var(--line);border-radius:16px;padding:24px;background:var(--graphite);transition:border-color .5s,transform .5s var(--ease)}
+.unit:hover{border-color:rgba(237,232,222,.24);transform:translateY(-4px)}
+.unit h3{font-family:'Onest',sans-serif;font-weight:700;font-size:18px;margin-bottom:8px}
+.unit p{color:var(--slate);font-size:14px;margin-bottom:14px}
+.unit a{display:inline-flex;align-items:center;gap:8px;color:var(--amber);font-weight:600;font-size:14px;transition:gap .3s var(--ease)}
+.unit a:hover{gap:13px}
+
+/* Форма */
+.cta{padding:110px 0;background:var(--ink);border-top:1px solid var(--line)}
+.cta-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start}
+.cta h2{font-family:'Onest',sans-serif;font-weight:800;font-size:clamp(28px,4vw,48px);line-height:1.04;letter-spacing:-0.02em}
+.cta p.big{margin-top:20px;color:#c8cbd4;font-size:17px;max-width:44ch}
+.btn{font-weight:600;font-size:15px;padding:15px 28px;border-radius:100px;display:inline-flex;align-items:center;gap:10px;
+  cursor:pointer;border:1px solid transparent;transition:transform .3s var(--ease),box-shadow .3s,border-color .3s;font-family:'Onest'}
+.btn-primary{color:#1A1206;font-weight:700;
+  background:linear-gradient(135deg,var(--gold-hi) 0%,var(--amber) 46%,var(--gold-lo) 100%);
+  box-shadow:0 2px 16px rgba(216,164,74,.20), inset 0 1px 0 rgba(255,255,255,.38)}
+.btn-primary:hover{transform:translateY(-3px);filter:brightness(1.07);
+  box-shadow:0 16px 40px rgba(216,164,74,.42), inset 0 1px 0 rgba(255,255,255,.5)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--bone)}
+.btn-ghost:hover{border-color:rgba(237,232,222,.5);transform:translateY(-3px)}
+form.card{border:1px solid var(--line);border-radius:22px;background:var(--graphite);padding:34px}
+.field{margin-bottom:18px}
+.field label{display:block;font-family:'Onest',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin-bottom:9px}
+.field input,.field select{width:100%;background:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--bone);font-family:'Onest';font-size:15px;transition:border-color .3s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--amber)}
+form.card .btn-primary{width:100%;justify-content:center;margin-top:8px}
+.form-note{font-family:'Onest',sans-serif;font-size:11px;color:var(--slate);margin-top:14px;text-align:center}
+.ok{display:none;text-align:center;padding:20px 0}
+.ok.show{display:block}
+.ok .cmark{width:56px;height:56px;border-radius:50%;background:rgba(194,203,216,.12);border:1px solid var(--teal);color:var(--teal);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:26px}
+.ok h3{font-family:'Onest';font-weight:800;font-size:22px;margin-bottom:8px}
+.ok p{color:var(--slate);font-size:14px}
+
+/* Footer */
+footer{background:var(--ink);border-top:1px solid var(--line);padding:56px 0 34px}
+.foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.logo-full{display:block;width:210px;max-width:60vw;aspect-ratio:1;
+  background:url('img/severov-logo.jpg') center/contain no-repeat;margin:-30px 0 -24px -20px;
+  mix-blend-mode:lighten;filter:contrast(1.08) saturate(1.05);
+  -webkit-mask-image:radial-gradient(76% 76% at 50% 50%,#000 80%,transparent 100%);
+  mask-image:radial-gradient(76% 76% at 50% 50%,#000 80%,transparent 100%)}
+.foot-cols{display:flex;gap:60px;flex-wrap:wrap}
+.foot-col h4{font-family:'Onest',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--slate);margin-bottom:16px}
+.foot-col a{display:block;color:#c8cbd4;font-size:14px;margin-bottom:10px;transition:color .25s}
+.foot-col a:hover{color:var(--amber)}
+.foot-bottom{display:flex;justify-content:space-between;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);flex-wrap:wrap;gap:12px}
+.foot-bottom p{font-family:'Onest',sans-serif;font-size:12px;color:var(--slate)}
+
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+
+@media(max-width:980px){
+  .nav-links{display:none}
+  .burger{display:flex}
+  .cgrid{grid-template-columns:1fr 1fr}
+  .office-body{grid-template-columns:1fr;gap:28px;padding:28px}
+  .unit-grid{grid-template-columns:1fr 1fr}
+  .cta-grid{grid-template-columns:1fr;gap:40px}
+}
+@media(max-width:560px){
+  .cgrid{grid-template-columns:1fr}
+  .unit-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms !important;scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+}
+
+/* ---------- мобільне меню ---------- */
+.burger span{transition:transform .3s var(--ease),opacity .2s}
+.burger.on span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.on span:nth-child(2){opacity:0}
+.burger.on span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mnav{position:fixed;top:74px;left:0;right:0;z-index:99;display:none;
+  background:rgba(8,9,13,.97);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);padding:8px 0 20px;
+  max-height:calc(100vh - 74px);overflow-y:auto}
+.mnav.open{display:block;animation:mnavIn .25s var(--ease)}
+@keyframes mnavIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.mnav a{display:block;padding:15px 28px;font-size:16px;color:#c8cbd4;border-bottom:1px solid var(--line)}
+.mnav a:active{background:rgba(237,232,222,.05)}
+.mnav a[aria-current]{color:var(--amber)}
+.mnav .mcall{margin:18px 28px 0;display:flex;justify-content:center;border-bottom:none;
+  color:#1A1206;font-weight:700;border-radius:100px;padding:14px 22px;
+  background:linear-gradient(135deg,var(--gold-hi) 0%,var(--amber) 46%,var(--gold-lo) 100%)}
+@media(min-width:981px){.mnav{display:none !important}}
+
+/* власна стрілка селекта: нативна не вписувалась у темну тему */
+.field select{
+  -webkit-appearance:none;-moz-appearance:none;appearance:none;
+  padding-right:44px;cursor:pointer;
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9' fill='none'%3E%3Cpath d='M1 1.5 7 7.5l6-6' stroke='%23D8A44A' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 16px center;
+  background-size:14px 9px;
+}
+.field select::-ms-expand{display:none}
+.field select:hover{border-color:rgba(216,164,74,.45)}
+.field select option{background:#0F1218;color:#EDE8DE}
+
+/* антиспам-пастка: приховане поле, яке заповнюють лише боти */
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-note a{color:var(--slate);text-decoration:underline;text-underline-offset:3px}
+.form-note a:hover{color:var(--amber)}
+.form-err{display:none;margin-top:14px;padding:14px 16px;border-radius:12px;
+  border:1px solid rgba(216,164,74,.4);background:rgba(216,164,74,.07);
+  color:#c8cbd4;font-size:14px;line-height:1.5}
+.form-err.show{display:block}
+.form-err a{color:var(--amber);font-weight:600}
+button[disabled]{opacity:.6;pointer-events:none}
+
+/* Політика */
+.doc-page{padding:120px 0 100px}
+.doc-page h1{font-family:'Onest',sans-serif;font-weight:800;letter-spacing:-0.02em;
+  font-size:clamp(30px,4.4vw,52px);line-height:1.06;max-width:20ch}
+.doc-upd{margin-top:16px;font-size:13px;color:var(--slate)}
+.doc-body{max-width:76ch;margin-top:44px}
+.doc-body h2{font-family:'Onest',sans-serif;font-weight:700;font-size:21px;margin:38px 0 12px}
+.doc-body p{color:#c8cbd4;font-size:15px;margin-bottom:14px}
+.doc-body ul{list-style:none;margin:0 0 16px}
+.doc-body li{color:#c8cbd4;font-size:15px;padding-left:20px;position:relative;margin-bottom:9px}
+.doc-body li::before{content:"—";position:absolute;left:0;color:var(--amber)}
+.doc-body a{color:var(--amber);text-decoration:underline;text-underline-offset:3px}
+.doc-body strong{color:var(--bone);font-weight:600}
+.doc-note{margin-top:34px;padding:22px 24px;border:1px solid var(--line);border-radius:16px;
+  background:var(--graphite);color:var(--slate);font-size:14px;line-height:1.6}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="/" class="brand" aria-label="Severov Auto Group — на головну">
+      <span class="glyph"><img src="img/severov-logo.jpg" alt="Логотип Severov Auto Group" width="95" height="95"></span>
+      <span>SEVEROV<small>AUTO GROUP</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="/avto-z-ssha">США</a>
+      <a href="/avto-z-yevropy">Європа</a>
+      <a href="/avto-z-korei">Корея</a>
+      <a href="/avtopidbir">Автопідбір</a>
+      <a href="/avtovykup">Автовикуп</a>
+      <a href="/rozmytnennya">Розмитнення</a>
+      <a href="/kontakty">Контакти</a>
+      <a href="tel:+380965330530" class="nav-cta">096 533 05 30</a>
+    </nav>
+    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<nav class="mnav" id="mnav" aria-label="Мобільне меню">
+  <a href="/">Головна</a>
+  <a href="/avto-z-ssha">Авто з США в Харків</a>
+  <a href="/avto-z-yevropy">Авто з Європи в Харків</a>
+  <a href="/avto-z-korei">Авто з Кореї в Харків</a>
+  <a href="/avtopidbir">Автопідбір у Харкові</a>
+  <a href="/avtovykup">Автовикуп у Харкові</a>
+  <a href="/vidhuky">Відгуки клієнтів</a>
+  <a href="/rozmytnennya">Розмитнення авто</a>
+  <a href="/kontakty">Контакти</a>
+  <a href="tel:+380965330530" class="mcall">Зателефонувати · 096 533 05 30</a>
+</nav>
+
+<div class="wrap crumbs">
+  <a href="/">Головна</a> → <span>Політика конфіденційності</span>
+</div>
+
+<section class="doc-page">
+  <div class="wrap">
+    <h1>Політика конфіденційності</h1>
+    <p class="doc-upd">Чинна редакція від 29 липня 2026 року</p>
+
+    <div class="doc-body">
+      <p>Ця політика пояснює, які персональні дані збирає сайт <strong>www.autogroup.top</strong>, навіщо вони потрібні, скільки зберігаються і як їх видалити. Обробка здійснюється відповідно до Закону України «Про захист персональних даних».</p>
+
+      <h2>Хто обробляє дані</h2>
+      <p><strong>Severov Auto Group</strong>, м. Харків, майдан Захисників України, 4. Телефон <a href="tel:+380965330530">+38 (096) 533 05 30</a>, Telegram <a href="https://t.me/Sevautotrade" target="_blank" rel="noopener">@Sevautotrade</a>.</p>
+
+      <h2>Які дані ми збираємо</h2>
+      <p>Тільки те, що ви самі вводите у форму заявки:</p>
+      <ul>
+        <li>ім'я;</li>
+        <li>номер телефону;</li>
+        <li>параметри запиту — напрямок, бюджет, тип двигуна, марка й модель, стан авто, коментар;</li>
+        <li>назва сторінки, з якої надіслано заявку.</li>
+      </ul>
+      <p>Ми <strong>не збираємо</strong> паспортні дані, платіжну інформацію та не використовуємо приховане стеження. Заповнення форми добровільне.</p>
+
+      <h2>Навіщо ці дані</h2>
+      <p>Єдина мета — зв'язатися з вами, відповісти на запит і прорахувати вартість послуги. Ми не використовуємо ваші дані для розсилок без окремої згоди.</p>
+
+      <h2>Кому передаються дані</h2>
+      <p>Заявка з форми надходить у наш робочий чат у <strong>Telegram</strong> (Telegram FZ-LLC) і зберігається на серверах хостингу <strong>Vercel Inc.</strong>, де розміщено сайт. Третім особам у комерційних цілях дані не передаються й не продаються. Передача можлива лише на вимогу уповноважених державних органів у випадках, передбачених законом.</p>
+
+      <h2>Скільки зберігаємо</h2>
+      <p>Дані заявки зберігаються, доки вони потрібні для обробки звернення й подальшої комунікації, але не довше <strong>12 місяців</strong> із моменту останнього контакту. Далі видаляються.</p>
+
+      <h2>Ваші права</h2>
+      <ul>
+        <li>знати, які ваші дані ми обробляємо;</li>
+        <li>вимагати виправлення неточних даних;</li>
+        <li>відкликати згоду та вимагати видалення даних;</li>
+        <li>обмежити обробку або заперечити проти неї.</li>
+      </ul>
+      <p>Щоб скористатися будь-яким із цих прав, зателефонуйте або напишіть у Telegram — видалимо дані протягом трьох робочих днів і повідомимо про це.</p>
+
+      <h2>Файли cookie й аналітика</h2>
+      <p>Сайт не використовує рекламні чи трекінгові cookie й не будує профілі відвідувачів. Сторінка контактів містить вбудовану карту Google Maps — під час її завантаження Google може отримувати вашу IP-адресу відповідно до <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">своєї політики конфіденційності</a>. Карта завантажується лише коли ви догортаєте до неї.</p>
+
+      <h2>Зміни політики</h2>
+      <p>Якщо політика зміниться, ми оновимо цю сторінку й дату чинної редакції вгорі.</p>
+
+      <div class="doc-note">
+        Питання щодо обробки ваших даних: <a href="tel:+380965330530" style="color:var(--amber)">+38 (096) 533 05 30</a> або
+        <a href="https://t.me/Sevautotrade" target="_blank" rel="noopener" style="color:var(--amber)">@Sevautotrade</a>.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="/" class="logo-full" aria-label="Severov Auto Group — на головну"></a>
+        <p style="color:var(--slate);font-size:14px;max-width:32ch">Пригон авто під ключ зі США, Європи та Кореї в Харків. Автопідбір, перевірка та викуп авто.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col"><h4>Послуги</h4><a href="/rozmytnennya">Розмитнення авто</a><a href="/avtovykup">Автовикуп у Харкові</a><a href="/avtopidbir">Автопідбір у Харкові</a><a href="/avto-z-ssha">Авто з США</a><a href="/avto-z-yevropy">Авто з Європи</a><a href="/avto-z-korei">Авто з Кореї</a></div>
+        <div class="foot-col"><h4>Компанія</h4><a href="/vidhuky">Відгуки клієнтів</a><a href="/kontakty">Контакти</a><a href="kontakty.html#map">Ми на карті</a><a href="/polityka-konfidentsiynosti">Політика конфіденційності</a></div>
+        <div class="foot-col">
+          <h4>Контакти в Харкові</h4>
+          <a href="tel:+380965330530">+38 (096) 533 05 30</a>
+          <a href="https://t.me/Sevautotrade" target="_blank" rel="noopener">Telegram @Sevautotrade</a>
+          <address style="font-style:normal;color:#c8cbd4;font-size:14px;margin-bottom:10px">м. Харків, майдан Захисників України, 4</address>
+          <span style="color:var(--slate);font-size:13px">Пн–Пт 9:00–18:00 · Сб 9:00–16:00</span>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Severov Auto Group. Усі права захищено.</p>
+      <p>Харків · Україна</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('solid',scrollY>40),{passive:true});
+(function(){
+  const b=document.getElementById('burger'), m=document.getElementById('mnav');
+  if(!b||!m) return;
+  const close=()=>{m.classList.remove('open');b.classList.remove('on')};
+  b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.classList.toggle('on',o)});
+  m.addEventListener('click',e=>{if(e.target.tagName==='A') close()});
+  addEventListener('keydown',e=>{if(e.key==='Escape') close()});
+  addEventListener('resize',close,{passive:true});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# AI-краулери — доступ відкрито свідомо: сайт розрахований і на видачу
+# в ChatGPT Search, Perplexity, Google AI Overviews та Gemini.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.autogroup.top/sitemap.xml
