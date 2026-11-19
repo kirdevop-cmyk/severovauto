@@ -1,0 +1,162 @@
+/* =========================================================
+   ГОЛОВНА: верхня смуга, банер, лоти Copart, підбір авто,
+   відгуки, вікно заявки й галерея фото.
+   Підключається лише на головній (UA і RU) після site.css.
+========================================================= */
+
+/* верхня смуга з адресою й телефоном */
+.topbar{height:34px;overflow:hidden;border-bottom:1px solid var(--line);background:rgba(7,8,11,.85);transition:height .35s var(--ease),border-color .35s}
+.hdr.solid .topbar{height:0;border-bottom-color:transparent}
+.topbar-in{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut);height:34px;display:flex;align-items:center;gap:22px;font-size:12.5px;color:#BFC3CA}
+.topbar-in b{color:var(--gold-hi);font-weight:600}
+.topbar-in .tb-sp{margin-left:auto}
+.topbar-in a:hover{color:#fff}
+.topbar-in svg{vertical-align:-2px;margin-right:6px;color:var(--gold)}
+
+/* перший екран: банер + заголовок + заклик */
+.hero2{padding-top:134px;padding-bottom:clamp(40px,6vw,70px);background:radial-gradient(90% 60% at 50% 0%,#151821 0%,var(--obsidian) 70%)}
+.banner{display:block;border-radius:22px;overflow:hidden;border:1px solid var(--line-2);box-shadow:0 30px 80px rgba(0,0,0,.55);background:#0b0c10}
+.banner img{width:100%;height:auto;display:block}
+.hero-panel{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:stretch;margin-top:28px}
+.hero-panel h1{font-family:var(--ff-display);font-stretch:75%;font-weight:800;text-transform:uppercase;font-size:clamp(38px,4.6vw,66px);line-height:.92}
+.hero-panel .hero-lead{margin-top:16px;max-width:60ch;color:#BFC3CA;font-size:clamp(15px,1.2vw,17px)}
+.cta-box{border-radius:var(--r);border:1px solid rgba(212,162,76,.4);background:linear-gradient(160deg,rgba(212,162,76,.14),rgba(212,162,76,.03) 60%),var(--carbon);padding:26px 26px 24px;display:flex;flex-direction:column;justify-content:center}
+.cta-box p{font-size:17px;line-height:1.45;margin-bottom:18px}
+.cta-box p b{color:var(--gold-hi)}
+.cta-box .btn{width:100%}
+.cta-box small{display:block;margin-top:12px;color:var(--muted);font-size:13px;text-align:center}
+.bens{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.ben{display:flex;gap:14px;align-items:flex-start;padding:18px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.015)}
+.ben-ic{flex:none;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(212,162,76,.12);color:var(--gold)}
+.ben b{display:block;font-family:var(--ff-display);font-weight:600;font-size:16px;letter-spacing:.02em;margin-bottom:3px}
+.ben span{font-size:13.5px;color:var(--muted);line-height:1.45}
+
+/* лоти Copart */
+.lots-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.lot{display:flex;flex-direction:column;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:linear-gradient(180deg,var(--carbon-2),var(--carbon));transition:border-color .3s,transform .45s var(--ease)}
+.lot:hover{border-color:rgba(212,162,76,.45);transform:translateY(-3px)}
+.lot.more{display:none}
+.lots-grid.all .lot.more{display:flex}
+.lot-pic{position:relative;aspect-ratio:4/3;background:#0b0c10;cursor:zoom-in;border:0;padding:0;display:block;width:100%}
+.lot-pic img{width:100%;height:100%;object-fit:cover}
+.lot-pic .tag{position:absolute;top:12px;left:12px;display:flex;align-items:center;gap:7px;height:28px;padding:0 11px;border-radius:999px;background:rgba(7,8,11,.75);backdrop-filter:blur(8px);font-family:var(--ff-display);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#E3E5E9}
+.lot-pic .tag b{color:var(--gold)}
+.lot-pic .cnt{position:absolute;right:12px;bottom:12px;display:flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:999px;background:rgba(7,8,11,.75);font-size:12.5px;color:#fff}
+.lot-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:4px;background:#0b0c10}
+.lot-thumbs button{border:0;padding:0;background:#111;cursor:zoom-in;aspect-ratio:4/3;overflow:hidden;border-radius:6px;position:relative}
+.lot-thumbs img{width:100%;height:100%;object-fit:cover;opacity:.85;transition:opacity .2s}
+.lot-thumbs button:hover img{opacity:1}
+.lot-thumbs .all span{position:absolute;inset:0;display:grid;place-items:center;background:rgba(7,8,11,.62);color:#fff;font-family:var(--ff-display);font-size:12px;letter-spacing:.06em}
+.lot-body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.lot h3{font-family:var(--ff-display);font-stretch:75%;font-weight:800;font-size:27px;text-transform:uppercase;line-height:1}
+.lot-spec{font-size:13.5px;color:#C4C8CE;margin-top:8px}
+.lot-desc{font-size:13.5px;color:var(--muted);margin-top:8px}
+.lot dl{margin-top:12px;border-top:1px solid var(--line)}
+.lot dl div{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);font-size:13px}
+.lot dt{color:var(--muted)}
+.lot dd{text-align:right;font-weight:500}
+.lot-price{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.lot-price div{border-radius:10px;background:rgba(255,255,255,.03);border:1px solid var(--line);padding:9px 11px}
+.lot-price small{display:block;font-size:11px;color:var(--muted);letter-spacing:.04em}
+.lot-price b{font-family:var(--ff-display);font-weight:700;font-size:20px;letter-spacing:.02em}
+.lot-price .hot{border-color:rgba(212,162,76,.45);background:rgba(212,162,76,.08)}
+.lot-price .hot b{color:var(--gold-hi)}
+.lot-acv{font-size:12.5px;color:var(--muted);margin-top:8px}
+.lot-acts{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:16px}
+.lot-acts .btn{height:46px;padding:0 18px;font-size:12px}
+.lot-acts a.ext{font-size:12.5px;color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+.lot-acts a.ext:hover{color:var(--bone)}
+.lots-more{display:flex;justify-content:center;margin-top:24px}
+.lots-grid.all + .lots-more{display:none}
+.lots-note{font-size:12.5px;color:var(--muted);margin-top:18px;max-width:100ch}
+
+/* підбір: «Шукаєте конкретне авто?» */
+.picker{position:relative;border-radius:calc(var(--r) + 6px);overflow:hidden;border:1px solid var(--line-2);
+  background:linear-gradient(90deg,#090B10 0%,#090B10 38%,rgba(9,11,16,.15) 72%),url(/img/picker-car.webp) right center/auto 100% no-repeat,#090B10;
+  padding:clamp(28px,4vw,52px)}
+.picker h2{font-family:var(--ff-display);font-stretch:75%;font-weight:800;text-transform:uppercase;font-size:clamp(34px,4.4vw,60px);line-height:.92;max-width:14ch}
+.picker .lead{color:#C4C8CE;margin-top:14px;max-width:46ch;font-size:16.5px}
+.picker .lead b{color:var(--gold-hi)}
+.pick-form{display:grid;grid-template-columns:1.2fr 1fr 1fr auto;gap:10px;margin-top:28px;max-width:1080px}
+.pick-form .fld{position:relative}
+.pick-form label{position:absolute;left:20px;top:9px;font-family:var(--ff-display);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6C717B;pointer-events:none}
+.pick-form input,.pick-form select{width:100%;height:60px;border-radius:999px;border:1px solid transparent;background:#F2F2F4;color:#14161B;padding:20px 20px 4px;font-size:15px;font-weight:500;appearance:none}
+.pick-form select{background-image:linear-gradient(45deg,transparent 50%,#6C717B 50%),linear-gradient(135deg,#6C717B 50%,transparent 50%);background-position:calc(100% - 24px) 28px,calc(100% - 19px) 28px;background-size:5px 5px;background-repeat:no-repeat}
+.pick-form input:focus,.pick-form select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,162,76,.3)}
+.pick-form .btn{height:60px}
+.feats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:22px;border-top:1px solid var(--line)}
+.feat{display:flex;gap:14px;padding:22px 22px 4px 0;border-right:1px solid var(--line);margin-right:22px}
+.feat:last-child{border-right:0;margin-right:0}
+.feat svg{flex:none;color:var(--gold)}
+.feat b{display:block;font-weight:600;margin-bottom:3px}
+.feat span{font-size:13.5px;color:var(--muted)}
+
+/* відгуки: фото видач */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;border:1px solid var(--line);margin:0}
+.rev img{width:100%;height:100%;object-fit:cover}
+.rev figcaption{position:absolute;inset:auto 0 0;padding:40px 18px 16px;background:linear-gradient(0deg,rgba(7,8,11,.92),transparent);font-size:14px}
+.rev figcaption b{display:block;font-family:var(--ff-display);font-weight:600;font-size:17px}
+
+/* вікно заявки */
+.modal{position:fixed;inset:0;z-index:300;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(4,5,8,.78);backdrop-filter:blur(6px)}
+.modal.open{display:flex}
+.modal-box{position:relative;width:min(480px,100%);max-height:calc(100vh - 40px);overflow:auto;border-radius:22px;background:linear-gradient(180deg,#171A21,#0F1116);border:1px solid var(--line-2);padding:30px 28px 26px;box-shadow:0 40px 100px rgba(0,0,0,.6)}
+.modal-box h3{font-family:var(--ff-display);font-stretch:75%;font-weight:800;text-transform:uppercase;font-size:30px;line-height:1;padding-right:36px}
+.modal-sub{color:var(--muted);font-size:14px;margin:8px 0 16px}
+.modal-sum{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.modal-sum:empty{display:none}
+.modal-sum span{font-size:12.5px;padding:5px 10px;border-radius:999px;background:rgba(212,162,76,.12);border:1px solid rgba(212,162,76,.35);color:var(--gold-hi)}
+.modal-x{position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line-2);background:none;color:var(--bone);font-size:20px;cursor:pointer}
+.msgr{display:flex;flex-wrap:wrap;gap:6px}
+.msgr label{position:relative;font-size:13px}
+.msgr input{position:absolute;opacity:0;pointer-events:none}
+.msgr span{display:inline-block;padding:8px 14px;border-radius:999px;border:1px solid var(--line-2);cursor:pointer;transition:background .2s,color .2s}
+.msgr input:checked+span{background:var(--bone);color:var(--obsidian);border-color:var(--bone)}
+.msgr input:focus-visible+span{outline:2px solid var(--gold);outline-offset:2px}
+
+/* галерея фото лота */
+.lb{position:fixed;inset:0;z-index:310;display:none;flex-direction:column;background:rgba(4,5,8,.96)}
+.lb.open{display:flex}
+.lb-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;color:#D5D8DD;font-size:14px}
+.lb-top b{font-family:var(--ff-display);font-weight:600;letter-spacing:.04em}
+.lb-x{width:42px;height:42px;border-radius:50%;border:1px solid var(--line-2);background:none;color:#fff;font-size:22px;cursor:pointer}
+.lb-stage{flex:1;position:relative;display:flex;align-items:center;justify-content:center;min-height:0;padding:0 70px}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:1px solid var(--line-2);background:rgba(20,23,30,.8);color:#fff;font-size:22px;cursor:pointer}
+.lb-prev{left:12px}.lb-next{right:12px}
+.lb-strip{display:flex;gap:6px;overflow-x:auto;padding:12px 18px 18px}
+.lb-strip button{flex:none;width:84px;height:63px;border:2px solid transparent;border-radius:6px;padding:0;overflow:hidden;background:#111;cursor:pointer;opacity:.6}
+.lb-strip button[aria-current="true"]{border-color:var(--gold);opacity:1}
+.lb-strip img{width:100%;height:100%;object-fit:cover}
+
+@media (max-width:1180px){
+  .lots-grid{grid-template-columns:1fr 1fr}
+  .bens{grid-template-columns:1fr 1fr}
+  .pick-form{grid-template-columns:1fr 1fr}
+  .pick-form .btn{grid-column:1/-1}
+  .feats{grid-template-columns:1fr 1fr}
+  .feat:nth-child(2){border-right:0;margin-right:0}
+}
+@media (max-width:900px){
+  .topbar{display:none}
+  .hero2{padding-top:100px}
+  .hero-panel{grid-template-columns:1fr}
+  .picker{background:linear-gradient(0deg,#090B10 0%,#090B10 50%,rgba(9,11,16,.1) 78%),url(/img/picker-car.webp) center top/100% auto no-repeat,#090B10;padding-top:46vw}
+}
+@media (max-width:640px){
+  .hero2{padding-top:84px}
+  .banner{border-radius:16px}
+  .bens,.lots-grid,.feats,.pick-form{grid-template-columns:1fr}
+  .feat{border-right:0;margin-right:0;border-bottom:1px solid var(--line);padding:16px 0}
+  .revs{grid-template-columns:1fr}
+  .rev{aspect-ratio:4/3}
+  .lb-stage{padding:0 8px}
+  .lb-nav{display:none}
+  .modal-box{padding:26px 20px 22px}
+}
+
+/* ряд переваг у блоці підбору — на темній смузі, щоб не губився на фото авто */
+.picker .feats{margin:30px calc(-1 * clamp(28px,4vw,52px)) calc(-1 * clamp(28px,4vw,52px));padding:0 clamp(28px,4vw,52px) 20px;background:rgba(9,11,16,.88);backdrop-filter:blur(8px)}
+.field .msgr label{display:inline-block;margin:0;font-family:var(--ff-body);font-size:13.5px;letter-spacing:0;text-transform:none;color:var(--bone)}
+.hero-panel .hero-lead{opacity:1;animation:none}
