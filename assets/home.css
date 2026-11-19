@@ -160,3 +160,24 @@
 .picker .feats{margin:30px calc(-1 * clamp(28px,4vw,52px)) calc(-1 * clamp(28px,4vw,52px));padding:0 clamp(28px,4vw,52px) 20px;background:rgba(9,11,16,.88);backdrop-filter:blur(8px)}
 .field .msgr label{display:inline-block;margin:0;font-family:var(--ff-body);font-size:13.5px;letter-spacing:0;text-transform:none;color:var(--bone)}
 .hero-panel .hero-lead{opacity:1;animation:none}
+
+/* поле «Марка, модель»: випадний список марок і моделей */
+.picker{overflow:visible}
+.picker .feats{border-radius:0 0 calc(var(--r) + 6px) calc(var(--r) + 6px)}
+.cb input{padding-right:52px}
+.cb-tg{position:absolute;right:8px;top:8px;width:44px;height:44px;border:0;border-radius:50%;background:none;color:#6C717B;cursor:pointer;display:grid;place-items:center}
+.cb-menu{position:absolute;left:0;top:calc(100% + 8px);z-index:40;width:max(100%,440px);max-height:380px;overflow:auto;border-radius:18px;background:#FFFFFF;color:#14161B;box-shadow:0 24px 60px rgba(0,0,0,.45);padding:8px;overscroll-behavior:contain}
+.cb-head{font-family:var(--ff-display);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#7A808A;padding:12px 12px 6px}
+.cb-chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(122px,1fr));gap:6px;padding:0 6px 6px}
+.cb-chip{height:38px;border-radius:10px;border:1px solid #E3E4E8;background:#F6F6F8;color:#14161B;font-size:13.5px;font-weight:600;cursor:pointer;padding:0 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cb-chip:hover,.cb-chip.on{background:#14161B;color:#fff;border-color:#14161B}
+.cb-opt{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 12px;border-radius:10px;font-size:15px;cursor:pointer}
+.cb-opt b{font-weight:700}
+.cb-opt small{font-size:12px;color:#8A8F99}
+.cb-opt:hover,.cb-opt.on{background:#F1EBDD}
+.cb-back{border:0;background:none;color:#8A5E1F;font-family:var(--ff-display);font-size:11px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;padding:0}
+.cb-empty{padding:14px 12px;font-size:14px;color:#6C717B}
+@media (max-width:640px){
+  .cb-menu{width:100%;max-height:320px}
+  .cb-chips{grid-template-columns:repeat(2,1fr)}
+}

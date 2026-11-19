@@ -132,6 +132,84 @@
     });
   });
 
+  /* ---------- поле «Марка, модель»: список марок і моделей з пошуком ---------- */
+  var combo = document.getElementById('carCombo');
+  if (combo && window.CAR_MAKES) (function () {
+    var inp = combo.querySelector('input'), menu = combo.querySelector('.cb-menu'), tg = combo.querySelector('.cb-tg');
+    var MK = window.CAR_MAKES, POP = window.CAR_POPULAR || [], NAMES = Object.keys(MK).sort();
+    var L = RU ? { pop: 'Популярные марки', all: 'Все марки', back: '← Все марки', any: 'Любая модель', none: 'Нет в списке - оставим как вы написали', models: 'моделей' }
+               : { pop: 'Популярні марки', all: 'Усі марки', back: '← Усі марки', any: 'Будь-яка модель', none: 'Немає в списку - залишимо як ви написали', models: 'моделей' };
+    var items = [], act = -1, mode = 'all', make = '';
+    var esc = function (s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+
+    function opt(label, value, kind, extra) {
+      items.push({ value: value, kind: kind });
+      var i = items.length - 1;
+      return '<div class="cb-opt' + (kind === 'make' ? ' is-make' : '') + '" role="option" id="cbo' + i + '" data-i="' + i + '"><span>' + label + '</span>' + (extra ? '<small>' + extra + '</small>' : '') + '</div>';
+    }
+    function render() {
+      items = []; act = -1;
+      var q = inp.value.trim().toLowerCase(), html = '';
+      var exact = NAMES.filter(function (n) { return n.toLowerCase() === q.replace(/\s+$/, ''); })[0];
+      if (mode === 'models' || exact) {
+        make = exact || make; mode = 'models';
+        html += '<div class="cb-head"><button type="button" class="cb-back">' + L.back + '</button></div>';
+        html += opt('<b>' + L.any + ' ' + esc(make) + '</b>', make, 'any');
+        MK[make].forEach(function (m) { html += opt(esc(make) + ' <b>' + esc(m) + '</b>', make + ' ' + m, 'model'); });
+      } else if (!q) {
+        html += '<div class="cb-head">' + L.pop + '</div><div class="cb-chips">';
+        POP.forEach(function (n) { items.push({ value: n, kind: 'make' }); html += '<button type="button" class="cb-chip" role="option" id="cbo' + (items.length - 1) + '" data-i="' + (items.length - 1) + '">' + esc(n) + '</button>'; });
+        html += '</div><div class="cb-head">' + L.all + '</div>';
+        NAMES.forEach(function (n) { html += opt(esc(n), n, 'make', MK[n].length + ' ' + L.models); });
+      } else {
+        var found = 0;
+        NAMES.forEach(function (n) {
+          if (n.toLowerCase().indexOf(q) >= 0) { html += opt(esc(n), n, 'make', MK[n].length + ' ' + L.models); found++; }
+        });
+        NAMES.forEach(function (n) {
+          MK[n].forEach(function (m) {
+            var full = (n + ' ' + m).toLowerCase();
+            if (found < 60 && (full.indexOf(q) >= 0 || m.toLowerCase().indexOf(q) >= 0)) { html += opt(esc(n) + ' <b>' + esc(m) + '</b>', n + ' ' + m, 'model'); found++; }
+          });
+        });
+        if (!found) html += '<div class="cb-empty">' + L.none + '</div>';
+      }
+      menu.innerHTML = html;
+      menu.scrollTop = 0;
+      var back = menu.querySelector('.cb-back');
+      if (back) back.addEventListener('click', function () { mode = 'all'; inp.value = ''; render(); inp.focus(); });
+    }
+    function open() { if (!menu.hidden) return; menu.hidden = false; inp.setAttribute('aria-expanded', 'true'); render(); }
+    function close() { menu.hidden = true; inp.setAttribute('aria-expanded', 'false'); inp.removeAttribute('aria-activedescendant'); }
+    function choose(i) {
+      var it = items[i]; if (!it) return;
+      if (it.kind === 'make') { make = it.value; mode = 'models'; inp.value = it.value; render(); inp.focus(); return; }
+      inp.value = it.value; mode = 'all'; close();
+    }
+    function highlight(i) {
+      var els = menu.querySelectorAll('[role="option"]');
+      if (!els.length) return;
+      act = (i + els.length) % els.length;
+      els.forEach(function (e, k) { e.classList.toggle('on', k === act); });
+      els[act].scrollIntoView({ block: 'nearest' });
+      inp.setAttribute('aria-activedescendant', els[act].id);
+    }
+    inp.addEventListener('focus', open);
+    inp.addEventListener('click', open);
+    inp.addEventListener('input', function () { mode = 'all'; menu.hidden = false; inp.setAttribute('aria-expanded', 'true'); render(); });
+    inp.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown') { e.preventDefault(); open(); highlight(act + 1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); open(); highlight(act - 1); }
+      else if (e.key === 'Enter' && !menu.hidden && act >= 0) { e.preventDefault(); choose(+menu.querySelectorAll('[role="option"]')[act].getAttribute('data-i')); }
+      else if (e.key === 'Escape') { if (!menu.hidden) { e.stopPropagation(); close(); } }
+      else if (e.key === 'Tab') close();
+    });
+    tg.addEventListener('click', function () { if (menu.hidden) { inp.focus(); open(); } else close(); });
+    menu.addEventListener('mousedown', function (e) { e.preventDefault(); });
+    menu.addEventListener('click', function (e) { var o = e.target.closest('[data-i]'); if (o) choose(+o.getAttribute('data-i')); });
+    document.addEventListener('click', function (e) { if (!combo.contains(e.target)) close(); });
+  })();
+
   /* Escape закриває відкрите вікно; стрілки гортають фото */
   addEventListener('keydown', function (e) {
     if (lb && lb.classList.contains('open')) {
