@@ -64,6 +64,15 @@
     });
   });
 
+  /* кнопка послуги підставляє її у поле «Що потрібно» */
+  document.querySelectorAll("[data-svc]").forEach(function (a) {
+    a.addEventListener("click", function () {
+      var sel = document.querySelector("#leadForm select[name=\"topic\"]");
+      var v = a.getAttribute("data-svc");
+      if (sel && [].some.call(sel.options, function (o) { return o.text === v; })) sel.value = v;
+    });
+  });
+
   /* відправка заявки в /api/lead */
   var form = document.getElementById('leadForm');
   if (form) {

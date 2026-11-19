@@ -191,19 +191,16 @@
         {"@type":"City","name":"Харків"},
         {"@type":"AdministrativeArea","name":"Харківська область"}
       ],
-      "offers": {
-        "@type": "Offer",
-        "name": "Разовий виїзд і перевірка автомобіля",
-        "price": "1500",
-        "priceCurrency": "UAH",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.autogroup.top/avtopidbir"
-      }
+      "offers": [
+        {"@type": "Offer", "name": "Разовий огляд авто", "price": "1500", "priceCurrency": "UAH", "availability": "https://schema.org/InStock", "url": "https://www.autogroup.top/avtopidbir#svc-once"},
+        {"@type": "Offer", "name": "Експерт на день", "price": "100", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.autogroup.top/avtopidbir#svc-day"},
+        {"@type": "Offer", "name": "Підбір авто під ключ+", "price": "250", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.autogroup.top/avtopidbir#svc-key"}
+      ]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type":"Question","name":"Скільки коштує автопідбір у Харкові?","acceptedAnswer":{"@type":"Answer","text":"Разовий виїзд на одне авто - 1500 грн: діагностика, товщиномір, юридична перевірка й письмовий висновок. Підбір під ключ - за договором."}},
+        {"@type":"Question","name":"Скільки коштує автопідбір у Харкові?","acceptedAnswer":{"@type":"Answer","text":"Разовий огляд одного авто - від 1500 грн. Експерт на цілий день, щоб перевірити кілька авто, - від 100 $. Підбір авто під ключ+ за договором, від пошуку до купівлі, - від 250 $."}},
         {"@type":"Question","name":"Що входить у разову перевірку?","acceptedAnswer":{"@type":"Answer","text":"Виїзд експерта, діагностика сканером, двигун, коробка, підвіска, заміри фарби, подушки безпеки, пробіг, документи й бази, звіт із фото."}},
         {"@type":"Question","name":"Чи окупається перевірка?","acceptedAnswer":{"@type":"Answer","text":"Зазвичай так: знижка за виявлені недоліки часто перевищує вартість перевірки. Головна економія - не купити проблемне авто."}},
         {"@type":"Question","name":"Скільки триває огляд?","acceptedAnswer":{"@type":"Answer","text":"Одна-дві години. Письмовий висновок із фото - того ж дня."}},
@@ -322,47 +319,82 @@
   </div>
 </section>
 
-<section class="classes block" id="price">
+<section class="svc block" id="price">
   <div class="wrap">
     <div class="sec-head">
       <div class="rv">
-        <div class="sec-tag">Вартість</div>
-        <h2 class="sec-title">Скільки коштує автопідбір</h2>
+        <div class="sec-tag">Послуги та ціни</div>
+        <h2 class="sec-title">Послуги автопідбору в Харкові</h2>
       </div>
-      <p class="sec-desc rv d1">Перевірка окупається на торзі: недоліки - це підстава для знижки.</p>
+      <p class="sec-desc rv d1">Оберіть формат: одне авто, цілий день з експертом або пошук під ключ за договором. Перевірка окупається на торзі.</p>
     </div>
-    <div class="price-grid">
-      <article class="price main rv">
-        <span class="badge">Найчастіше беруть</span>
-        <h3>Разовий виїзд і перевірка авто</h3>
-        <p class="sub">Ви знайшли конкретний автомобіль - ми його перевіряємо.</p>
-        <div class="amount"><b>1500</b><span>ГРН / ОДНЕ АВТО</span></div>
-        <ul>
-          <li>Виїзд експерта на місце огляду в Харкові</li>
-          <li>Комп'ютерна діагностика, двигун, КПП, підвіска</li>
-          <li>Заміри товщини фарби по всьому кузову</li>
-          <li>Перевірка подушок безпеки та звіряння пробігу</li>
-          <li>Юридична перевірка за базами та аналіз документів</li>
-          <li>Письмовий висновок із фото того ж дня</li>
-        </ul>
-        <a href="#cta" class="btn btn-gold">Замовити перевірку
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h11M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+    <div class="svc-grid">
+      <article class="svc-card is-main rv" id="svc-once">
+        <div class="svc-media">
+          <img src="/img/svc-once.webp" width="720" height="540" loading="lazy" alt="Огляд авто на підйомнику СТО під час разової перевірки перед покупкою в Харкові">
+          <span class="svc-chip">Одне авто</span>
+          <span class="svc-pop">Найчастіше беруть</span>
+        </div>
+        <div class="svc-body">
+          <h3>Разовий огляд авто</h3>
+          <p class="svc-sub">Ви знайшли машину - експерт перевіряє її від кузова до електроніки.</p>
+          <div class="svc-price"><small>від</small><b>1500</b><span>грн · одне авто</span></div>
+          <ul class="svc-list">
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Кузов із товщиноміром</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Комп’ютерна діагностика всіх систем</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Огляд підкапотного простору</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Коробка передач</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Рульове, підвіска та гальма</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Робота електроніки</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Письмовий висновок із фото того ж дня</li>
+          </ul>
+          <a href="#cta" class="btn btn-gold" data-svc="Разовий огляд авто - від 1500 грн">Замовити огляд
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h11M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
       </article>
-
-      <article class="price rv d1">
-        <h3>Підбір під ключ до результату</h3>
-        <p class="sub">Ви не знаєте, яке авто брати - ми ведемо пошук за вас.</p>
-        <div class="amount"><b>за договором</b></div>
-        <ul>
-          <li>Узгоджуємо клас, бюджет і побажання до авто</li>
-          <li>Шукаємо й фільтруємо варіанти на ринку - ви не витрачаєте час</li>
-          <li>Перевіряємо кожен відібраний автомобіль на місці</li>
-          <li>Щоденний звіт зі станом кожного оглянутого авто</li>
-          <li>Торг на недоліки та супровід угоди купівлі-продажу</li>
-          <li>Допомога з переоформленням і постановкою на облік</li>
-        </ul>
-        <a href="#cta" class="btn btn-line">Обговорити умови</a>
+      <article class="svc-card rv d1" id="svc-day">
+        <div class="svc-media">
+          <img src="/img/svc-day.webp" width="720" height="540" loading="lazy" alt="Експерт Severov Auto Group перевіряє двигун BMW під час виїзду на день">
+          <span class="svc-chip">Цілий день</span>
+        </div>
+        <div class="svc-body">
+          <h3>Експерт на день</h3>
+          <p class="svc-sub">Плануєте дивитися кілька авто - експерт їздить з вами весь день.</p>
+          <div class="svc-price"><small>від</small><b>100</b><span>$ · один день</span></div>
+          <ul class="svc-list">
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Перевірка потрібної кількості авто за день</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Кожне авто - за всіма пунктами комплексної перевірки</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Допомога експерта в торзі з продавцем</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Допомога з переоформленням авто</li>
+          </ul>
+          <a href="#cta" class="btn btn-line" data-svc="Експерт на день - від 100 $">Замовити експерта
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h11M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+      <article class="svc-card rv d2" id="svc-key">
+        <div class="svc-media">
+          <img src="/img/svc-key.webp" width="720" height="540" loading="lazy" alt="Підбір авто під ключ: експерт оглядає моторний відсік Hyundai на майданчику в Харкові">
+          <span class="svc-chip">До результату</span>
+        </div>
+        <div class="svc-body">
+          <h3>Підбір авто під ключ+</h3>
+          <p class="svc-sub">Не знаєте, що брати - шукаємо, перевіряємо й купуємо разом із вами.</p>
+          <div class="svc-price"><small>від</small><b>250</b><span>$ · за договором</span></div>
+          <ul class="svc-list">
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Обов’язково укладаємо договір</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Разом моніторимо ринок і консультуємо з вибором</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Від 1 до 10 перевірок авто</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>2–3 виїзди з перевіркою на СТО</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Фото- та відеозвіт на кожне вибране авто</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Вносимо передоплату за авто</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Спільний огляд і купівля авто</li>
+          </ul>
+          <a href="#cta" class="btn btn-line" data-svc="Підбір авто під ключ+ - від 250 $">Обговорити підбір
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h11M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
       </article>
     </div>
   </div>
@@ -462,7 +494,7 @@
     </div>
 
     <div class="faq-list">
-      <details><summary><h3>Скільки коштує автопідбір у Харкові?</h3><i aria-hidden="true"></i></summary><p>Разовий виїзд на одне авто - 1500 грн: діагностика, товщиномір, юридична перевірка й письмовий висновок. Підбір під ключ - за договором.</p></details>
+      <details><summary><h3>Скільки коштує автопідбір у Харкові?</h3><i aria-hidden="true"></i></summary><p>Разовий огляд одного авто - від 1500 грн. Експерт на цілий день, щоб перевірити кілька авто, - від 100 $. Підбір авто під ключ+ за договором, від пошуку до купівлі, - від 250 $.</p></details>
       <details><summary><h3>Що входить у разову перевірку?</h3><i aria-hidden="true"></i></summary><p>Виїзд експерта, діагностика сканером, двигун, коробка, підвіска, заміри фарби, подушки безпеки, пробіг, документи й бази, звіт із фото.</p></details>
       <details><summary><h3>Чи окупається перевірка?</h3><i aria-hidden="true"></i></summary><p>Зазвичай так: знижка за виявлені недоліки часто перевищує вартість перевірки. Головна економія - не купити проблемне авто.</p></details>
       <details><summary><h3>Скільки триває огляд?</h3><i aria-hidden="true"></i></summary><p>Одна-дві години. Письмовий висновок із фото - того ж дня.</p></details>
@@ -501,8 +533,9 @@
           <div class="field">
             <label>Що потрібно</label>
             <select name="topic">
-              <option>Разова перевірка авто - 1500 грн</option>
-              <option>Підбір під ключ до результату</option>
+              <option>Разовий огляд авто - від 1500 грн</option>
+              <option>Експерт на день - від 100 $</option>
+              <option>Підбір авто під ключ+ - від 250 $</option>
               <option>Ще не визначився</option>
             </select>
           </div>

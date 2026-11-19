@@ -207,14 +207,11 @@
           "name": "Харьковская область"
         }
       ],
-      "offers": {
-        "@type": "Offer",
-        "name": "Разовый выезд и проверка автомобиля",
-        "price": "1500",
-        "priceCurrency": "UAH",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.autogroup.top/ru/avtopodbor"
-      }
+      "offers": [
+        {"@type": "Offer", "name": "Разовый осмотр авто", "price": "1500", "priceCurrency": "UAH", "availability": "https://schema.org/InStock", "url": "https://www.autogroup.top/ru/avtopodbor#svc-once"},
+        {"@type": "Offer", "name": "Эксперт на день", "price": "100", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.autogroup.top/ru/avtopodbor#svc-day"},
+        {"@type": "Offer", "name": "Подбор авто под ключ+", "price": "250", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.autogroup.top/ru/avtopodbor#svc-key"}
+      ]
     },
     {
       "@type": "FAQPage",
@@ -224,7 +221,7 @@
           "name": "Сколько стоит автоподбор в Харькове?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Разовый выезд на одно авто - 1500 грн: диагностика, толщиномер, юридическая проверка и письменное заключение. Подбор под ключ - по договору."
+            "text": "Разовый осмотр одного авто - от 1500 грн. Эксперт на целый день, чтобы проверить несколько авто, - от 100 $. Подбор авто под ключ+ по договору, от поиска до покупки, - от 250 $."
           }
         },
         {
@@ -380,47 +377,82 @@
   </div>
 </section>
 
-<section class="classes block" id="price">
+<section class="svc block" id="price">
   <div class="wrap">
     <div class="sec-head">
       <div class="rv">
-        <div class="sec-tag">Стоимость</div>
-        <h2 class="sec-title">Сколько стоит автоподбор</h2>
+        <div class="sec-tag">Услуги и цены</div>
+        <h2 class="sec-title">Услуги автоподбора в Харькове</h2>
       </div>
-      <p class="sec-desc rv d1">Проверка окупается на торге: недостатки - это основание для скидки.</p>
+      <p class="sec-desc rv d1">Выберите формат: одно авто, целый день с экспертом или поиск под ключ по договору. Проверка окупается на торге.</p>
     </div>
-    <div class="price-grid">
-      <article class="price main rv">
-        <span class="badge">Чаще всего берут</span>
-        <h3>Разовый выезд и проверка авто</h3>
-        <p class="sub">Вы нашли конкретный автомобиль - мы его проверяем.</p>
-        <div class="amount"><b>1500</b><span>ГРН / ОДНО АВТО</span></div>
-        <ul>
-          <li>Выезд эксперта на место осмотра в Харькове</li>
-          <li>Компьютерная диагностика, двигатель, КПП, подвеска</li>
-          <li>Замеры толщины краски по всему кузову</li>
-          <li>Проверка подушек безопасности и сверка пробега</li>
-          <li>Юридическая проверка по базам и анализ документов</li>
-          <li>Письменное заключение с фото в тот же день</li>
-        </ul>
-        <a href="#cta" class="btn btn-gold">Заказать проверку
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h11M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+    <div class="svc-grid">
+      <article class="svc-card is-main rv" id="svc-once">
+        <div class="svc-media">
+          <img src="/img/svc-once.webp" width="720" height="540" loading="lazy" alt="Осмотр авто на подъёмнике СТО во время разовой проверки перед покупкой в Харькове">
+          <span class="svc-chip">Одно авто</span>
+          <span class="svc-pop">Чаще всего берут</span>
+        </div>
+        <div class="svc-body">
+          <h3>Разовый осмотр авто</h3>
+          <p class="svc-sub">Вы нашли машину - эксперт проверяет её от кузова до электроники.</p>
+          <div class="svc-price"><small>от</small><b>1500</b><span>грн · одно авто</span></div>
+          <ul class="svc-list">
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Кузов с толщиномером</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Компьютерная диагностика всех систем</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Осмотр подкапотного пространства</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Коробка передач</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Рулевое, подвеска и тормоза</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Работа электроники</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Письменное заключение с фото в тот же день</li>
+          </ul>
+          <a href="#cta" class="btn btn-gold" data-svc="Разовый осмотр авто - от 1500 грн">Заказать осмотр
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h11M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
       </article>
-
-      <article class="price rv d1">
-        <h3>Подбор под ключ до результата</h3>
-        <p class="sub">Вы не знаете, какое авто брать - мы ведём поиск за вас.</p>
-        <div class="amount"><b>по договору</b></div>
-        <ul>
-          <li>Согласовываем класс, бюджет и пожелания к авто</li>
-          <li>Ищем и фильтруем варианты на рынке - вы не тратите время</li>
-          <li>Проверяем каждый отобранный автомобиль на месте</li>
-          <li>Ежедневный отчёт с состоянием каждого осмотренного авто</li>
-          <li>Торг на недостатки и сопровождение сделки купли-продажи</li>
-          <li>Помощь с переоформлением и постановкой на учёт</li>
-        </ul>
-        <a href="#cta" class="btn btn-line">Обсудить условия</a>
+      <article class="svc-card rv d1" id="svc-day">
+        <div class="svc-media">
+          <img src="/img/svc-day.webp" width="720" height="540" loading="lazy" alt="Эксперт Severov Auto Group проверяет двигатель BMW во время выезда на день">
+          <span class="svc-chip">Целый день</span>
+        </div>
+        <div class="svc-body">
+          <h3>Эксперт на день</h3>
+          <p class="svc-sub">Планируете смотреть несколько авто - эксперт ездит с вами весь день.</p>
+          <div class="svc-price"><small>от</small><b>100</b><span>$ · один день</span></div>
+          <ul class="svc-list">
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Проверка нужного количества авто за день</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Каждое авто - по всем пунктам комплексной проверки</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Помощь эксперта в торге с продавцом</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Помощь с переоформлением авто</li>
+          </ul>
+          <a href="#cta" class="btn btn-line" data-svc="Эксперт на день - от 100 $">Заказать эксперта
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h11M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+      <article class="svc-card rv d2" id="svc-key">
+        <div class="svc-media">
+          <img src="/img/svc-key.webp" width="720" height="540" loading="lazy" alt="Подбор авто под ключ: эксперт осматривает моторный отсек Hyundai на площадке в Харькове">
+          <span class="svc-chip">До результата</span>
+        </div>
+        <div class="svc-body">
+          <h3>Подбор авто под ключ+</h3>
+          <p class="svc-sub">Не знаете, что брать - ищем, проверяем и покупаем вместе с вами.</p>
+          <div class="svc-price"><small>от</small><b>250</b><span>$ · по договору</span></div>
+          <ul class="svc-list">
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Обязательно заключаем договор</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Вместе мониторим рынок и консультируем с выбором</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>От 1 до 10 проверок авто</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>2–3 выезда с проверкой на СТО</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Фото- и видеоотчёт на каждое выбранное авто</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Вносим предоплату за авто</li>
+            <li><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Совместный осмотр и покупка авто</li>
+          </ul>
+          <a href="#cta" class="btn btn-line" data-svc="Подбор авто под ключ+ - от 250 $">Обсудить подбор
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h11M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
       </article>
     </div>
   </div>
@@ -520,7 +552,7 @@
     </div>
 
     <div class="faq-list">
-      <details><summary><h3>Сколько стоит автоподбор в Харькове?</h3><i aria-hidden="true"></i></summary><p>Разовый выезд на одно авто - 1500 грн: диагностика, толщиномер, юридическая проверка и письменное заключение. Подбор под ключ - по договору.</p></details>
+      <details><summary><h3>Сколько стоит автоподбор в Харькове?</h3><i aria-hidden="true"></i></summary><p>Разовый осмотр одного авто - от 1500 грн. Эксперт на целый день, чтобы проверить несколько авто, - от 100 $. Подбор авто под ключ+ по договору, от поиска до покупки, - от 250 $.</p></details>
       <details><summary><h3>Что входит в разовую проверку?</h3><i aria-hidden="true"></i></summary><p>Выезд эксперта, диагностика сканером, двигатель, коробка, подвеска, замеры краски, подушки безопасности, пробег, документы и базы, отчёт с фото.</p></details>
       <details><summary><h3>Окупается ли проверка?</h3><i aria-hidden="true"></i></summary><p>Обычно да: скидка за выявленные недостатки часто превышает стоимость проверки. Главная экономия - не купить проблемное авто.</p></details>
       <details><summary><h3>Сколько длится осмотр?</h3><i aria-hidden="true"></i></summary><p>Один-два часа. Письменное заключение с фото - в тот же день.</p></details>
@@ -559,8 +591,9 @@
           <div class="field">
             <label>Что нужно</label>
             <select name="topic">
-              <option>Разовая проверка авто - 1500 грн</option>
-              <option>Подбор под ключ до результата</option>
+              <option>Разовый осмотр авто - от 1500 грн</option>
+              <option>Эксперт на день - от 100 $</option>
+              <option>Подбор авто под ключ+ - от 250 $</option>
               <option>Ещё не определился</option>
             </select>
           </div>
