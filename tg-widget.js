@@ -10,6 +10,15 @@
   var IG_URL = 'https://www.instagram.com/autogroupkh';
   var SHOW_BUBBLE_AFTER = 5000; // мс до появи підказки
   var KEY = 'tgw-closed';
+  var T = document.documentElement.lang === 'ru' ? {
+    q: 'Есть вопросы по авто?',
+    t: 'Напишите менеджеру в <em>Telegram</em> или <em>WhatsApp</em> — подберём вариант и посчитаем стоимость.',
+    x: 'Закрыть подсказку', wa: 'Написать в WhatsApp', tg: 'Написать в Telegram'
+  } : {
+    q: 'Є питання щодо авто?',
+    t: 'Напишіть менеджеру в <em>Telegram</em> або <em>WhatsApp</em> — підберемо варіант і порахуємо вартість.',
+    x: 'Закрити підказку', wa: 'Написати у WhatsApp', tg: 'Написати в Telegram'
+  };
 
   var css = [
     '.tgw{position:fixed;right:22px;bottom:22px;z-index:95;display:flex;align-items:flex-end;gap:14px;',
@@ -86,15 +95,15 @@
   root.innerHTML =
     '<div class="tgw-bubble">' +
       '<a class="tgw-link" href="' + TG_URL + '" target="_blank" rel="noopener">' +
-        '<b>Є питання щодо авто?</b>' +
-        '<span>Напишіть менеджеру в <em>Telegram</em> або <em>WhatsApp</em> — підберемо варіант і порахуємо вартість.</span>' +
+        '<b>' + T.q + '</b>' +
+        '<span>' + T.t + '</span>' +
       '</a>' +
-      '<button type="button" class="tgw-x" aria-label="Закрити підказку">×</button>' +
+      '<button type="button" class="tgw-x" aria-label="' + T.x + '">×</button>' +
     '</div>' +
     '<div class="tgw-stack">' +
       '<a class="tgw-mini tgw-ig" href="' + IG_URL + '" target="_blank" rel="noopener" aria-label="Instagram @autogroupkh" data-ch="instagram">' + ig + '</a>' +
-      '<a class="tgw-mini tgw-wa" href="' + WA_URL + '" target="_blank" rel="noopener" aria-label="Написати у WhatsApp" data-ch="whatsapp">' + wa + '</a>' +
-      '<a class="tgw-btn" href="' + TG_URL + '" target="_blank" rel="noopener" aria-label="Написати в Telegram" data-ch="telegram">' +
+      '<a class="tgw-mini tgw-wa" href="' + WA_URL + '" target="_blank" rel="noopener" aria-label="' + T.wa + '" data-ch="whatsapp">' + wa + '</a>' +
+      '<a class="tgw-btn" href="' + TG_URL + '" target="_blank" rel="noopener" aria-label="' + T.tg + '" data-ch="telegram">' +
         '<i class="tgw-ring"></i><i class="tgw-ring"></i>' + plane +
         '<i class="tgw-dot">1</i>' +
       '</a>' +

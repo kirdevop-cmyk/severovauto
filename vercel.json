@@ -38,6 +38,46 @@
     {
       "source": "/vidhuky",
       "destination": "/vidhuky.html"
+    },
+    {
+      "source": "/ru",
+      "destination": "/ru/index.html"
+    },
+    {
+      "source": "/ru/avto-iz-ssha",
+      "destination": "/ru/avto-iz-ssha.html"
+    },
+    {
+      "source": "/ru/avto-iz-evropy",
+      "destination": "/ru/avto-iz-evropy.html"
+    },
+    {
+      "source": "/ru/avto-iz-korei",
+      "destination": "/ru/avto-iz-korei.html"
+    },
+    {
+      "source": "/ru/avtopodbor",
+      "destination": "/ru/avtopodbor.html"
+    },
+    {
+      "source": "/ru/avtovykup",
+      "destination": "/ru/avtovykup.html"
+    },
+    {
+      "source": "/ru/rastamozhka",
+      "destination": "/ru/rastamozhka.html"
+    },
+    {
+      "source": "/ru/otzyvy",
+      "destination": "/ru/otzyvy.html"
+    },
+    {
+      "source": "/ru/kontakty",
+      "destination": "/ru/kontakty.html"
+    },
+    {
+      "source": "/ru/politika-konfidencialnosti",
+      "destination": "/ru/politika-konfidencialnosti.html"
     }
   ],
   "redirects": [
@@ -100,6 +140,56 @@
     {
       "source": "/vidhuky.html",
       "destination": "/vidhuky",
+      "permanent": true
+    },
+    {
+      "source": "/ru/index.html",
+      "destination": "/ru",
+      "permanent": true
+    },
+    {
+      "source": "/ru/avto-iz-ssha.html",
+      "destination": "/ru/avto-iz-ssha",
+      "permanent": true
+    },
+    {
+      "source": "/ru/avto-iz-evropy.html",
+      "destination": "/ru/avto-iz-evropy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/avto-iz-korei.html",
+      "destination": "/ru/avto-iz-korei",
+      "permanent": true
+    },
+    {
+      "source": "/ru/avtopodbor.html",
+      "destination": "/ru/avtopodbor",
+      "permanent": true
+    },
+    {
+      "source": "/ru/avtovykup.html",
+      "destination": "/ru/avtovykup",
+      "permanent": true
+    },
+    {
+      "source": "/ru/rastamozhka.html",
+      "destination": "/ru/rastamozhka",
+      "permanent": true
+    },
+    {
+      "source": "/ru/otzyvy.html",
+      "destination": "/ru/otzyvy",
+      "permanent": true
+    },
+    {
+      "source": "/ru/kontakty.html",
+      "destination": "/ru/kontakty",
+      "permanent": true
+    },
+    {
+      "source": "/ru/politika-konfidencialnosti.html",
+      "destination": "/ru/politika-konfidencialnosti",
       "permanent": true
     }
   ],

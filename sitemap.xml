@@ -1,63 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.autogroup.top/</loc>
-    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/"/>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.autogroup.top/ru</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/"/>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.autogroup.top/avto-z-ssha</loc>
-    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/avto-z-ssha"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru/avto-iz-ssha"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/avto-z-ssha"/>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.autogroup.top/ru/avto-iz-ssha</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/avto-z-ssha"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru/avto-iz-ssha"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/avto-z-ssha"/>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.autogroup.top/avto-z-yevropy</loc>
-    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/avto-z-yevropy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru/avto-iz-evropy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/avto-z-yevropy"/>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.autogroup.top/ru/avto-iz-evropy</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/avto-z-yevropy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru/avto-iz-evropy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/avto-z-yevropy"/>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.autogroup.top/avto-z-korei</loc>
-    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/avto-z-korei"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru/avto-iz-korei"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/avto-z-korei"/>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.autogroup.top/avtopidbir</loc>
-    <lastmod>2026-07-29</lastmod>
+    <loc>https://www.autogroup.top/ru/avto-iz-korei</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/avto-z-korei"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru/avto-iz-korei"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/avto-z-korei"/>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.autogroup.top/avtopidbir</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/avtopidbir"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru/avtopodbor"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/avtopidbir"/>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.autogroup.top/ru/avtopodbor</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/avtopidbir"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru/avtopodbor"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/avtopidbir"/>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.autogroup.top/avtovykup</loc>
-    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/avtovykup"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru/avtovykup"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/avtovykup"/>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.autogroup.top/kontakty</loc>
-    <lastmod>2026-07-29</lastmod>
+    <loc>https://www.autogroup.top/ru/avtovykup</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/avtovykup"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru/avtovykup"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/avtovykup"/>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.autogroup.top/rozmytnennya</loc>
-    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/rozmytnennya"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru/rastamozhka"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/rozmytnennya"/>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.autogroup.top/vidhuky</loc>
-    <lastmod>2026-07-29</lastmod>
+    <loc>https://www.autogroup.top/ru/rastamozhka</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/rozmytnennya"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru/rastamozhka"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/rozmytnennya"/>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.autogroup.top/kontakty</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/kontakty"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru/kontakty"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/kontakty"/>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.autogroup.top/ru/kontakty</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/kontakty"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru/kontakty"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/kontakty"/>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.autogroup.top/vidhuky</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/vidhuky"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru/otzyvy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/vidhuky"/>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.autogroup.top/ru/otzyvy</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/vidhuky"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru/otzyvy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/vidhuky"/>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.autogroup.top/polityka-konfidentsiynosti</loc>
-    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/polityka-konfidentsiynosti"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru/politika-konfidencialnosti"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/polityka-konfidentsiynosti"/>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.autogroup.top/ru/politika-konfidencialnosti</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.autogroup.top/polityka-konfidentsiynosti"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.autogroup.top/ru/politika-konfidencialnosti"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.autogroup.top/polityka-konfidentsiynosti"/>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
 </urlset>

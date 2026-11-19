@@ -75,7 +75,7 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (err) err.classList.remove('show');
-      if (btn) { btn.disabled = true; btn.textContent = 'Надсилаю…'; }
+      if (btn) { btn.disabled = true; btn.textContent = document.documentElement.lang === 'ru' ? 'Отправляю…' : 'Надсилаю…'; }
       var data = Object.fromEntries(new FormData(form).entries());
       data.page = form.getAttribute('data-page') || document.title;
       fetch('/api/lead', {

@@ -15,10 +15,11 @@
   // спекулярна карта Землі: вода світла, суша темна — чистіша маска, ніж кольорове фото
   const EARTH = 'https://cdn.jsdelivr.net/gh/mrdoob/three.js@r160/examples/textures/planets/earth_specular_2048.jpg';
 
-  const HUB = { lat: 49.99, lon: 36.23, label: 'ХАРКІВ' };
+  const RU = document.documentElement.lang === 'ru';
+  const HUB = { lat: 49.99, lon: 36.23, label: RU ? 'ХАРЬКОВ' : 'ХАРКІВ' };
   const NODES = [
     { lat: 39.5,  lon: -98.5, label: 'США'    },
-    { lat: 51.0,  lon: 6.5,   label: 'ЄВРОПА' },
+    { lat: 51.0,  lon: 6.5,   label: RU ? 'ЕВРОПА' : 'ЄВРОПА' },
     { lat: 35.2,  lon: 129.1, label: 'КОРЕЯ'  }   // Пусан
   ];
 

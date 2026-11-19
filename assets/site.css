@@ -401,3 +401,12 @@ a.way:hover{border-color:rgba(212,162,76,.45);background:rgba(212,162,76,.05)}
   .hero-arc .streak{stroke-dashoffset:0}
   .brands-track{animation:none}
 }
+
+/* ---------- перемикач мови ---------- */
+.lang{display:flex;align-items:center;gap:2px;padding:3px;border-radius:999px;border:1px solid var(--line-2)}
+.lang a{font-family:var(--ff-display);font-size:11px;font-weight:600;letter-spacing:.12em;padding:6px 10px;border-radius:999px;color:var(--muted);transition:color .25s,background .25s}
+.lang a:hover{color:var(--bone)}
+.lang a[aria-current]{background:var(--bone);color:var(--obsidian)}
+.mnav .lang{align-self:flex-start;margin-bottom:10px}
+.mnav .lang a{font-size:13px;padding:8px 14px;border-bottom:0;font-stretch:100%}
+@media (max-width:640px){.hdr-cta .lang{display:none}}
