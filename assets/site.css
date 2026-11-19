@@ -410,3 +410,8 @@ a.way:hover{border-color:rgba(212,162,76,.45);background:rgba(212,162,76,.05)}
 .mnav .lang{align-self:flex-start;margin-bottom:10px}
 .mnav .lang a{font-size:13px;padding:8px 14px;border-bottom:0;font-stretch:100%}
 @media (max-width:640px){.hdr-cta .lang{display:none}}
+
+/* SEO-текст головної: H2 + підзаголовки */
+.seo-text h2{color:var(--bone);font-family:var(--ff-display);font-stretch:75%;font-weight:800;text-transform:uppercase;font-size:clamp(28px,3.2vw,40px);line-height:1;margin-bottom:14px}
+.seo-text h3{font-size:22px;margin:26px 0 8px}
+.seo-text p{margin-bottom:12px}
