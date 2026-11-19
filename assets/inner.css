@@ -1,0 +1,83 @@
+/* =========================================================
+   Внутрішні сторінки: переводить їхні власні блоки на мову
+   дизайн-системи 2027 (site.css). Підключається після
+   інлайн-стилів сторінки, тому перекриває їх.
+========================================================= */
+
+/* старі змінні сторінок → нова палітра */
+:root{
+  --ink:#07080B;--graphite:#0E1015;--panel:#14171E;
+  --bone:#EEEAE3;--slate:#8C919B;--teal:#C9CDD3;
+  --amber:#D4A24C;--gold-hi:#F5D58E;--gold-lo:#8A5E1F;
+  --chrome-hi:#F2F4F7;--chrome-lo:#7A808A;
+  --maxw:1320px;
+}
+
+/* хлібні крихти під фіксованою шапкою */
+.crumbs{padding:112px var(--gut) 0;font-family:var(--ff-display);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.crumbs a:hover{color:var(--gold-hi)}
+.crumbs span{color:var(--gold)}
+
+/* заголовки секцій — як на головній */
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:clamp(36px,5vw,60px);flex-wrap:wrap}
+.sec-tag{display:inline-flex;align-items:center;gap:12px;font-family:var(--ff-display);font-weight:500;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+.sec-tag::before{content:"";width:28px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+.sec-title{font-family:var(--ff-display);font-stretch:75%;font-weight:800;text-transform:uppercase;line-height:.92;letter-spacing:-.005em;
+  font-size:clamp(34px,4.8vw,72px);margin-top:18px;max-width:18ch}
+.sec-desc{color:var(--muted);max-width:44ch;font-size:15px}
+.block{padding:clamp(80px,10vw,130px) 0}
+
+/* перший екран внутрішньої сторінки */
+.khero{padding:40px 0 clamp(70px,9vw,110px)}
+.khero .eyebrow{letter-spacing:.22em;color:#D5D8DD;border-color:var(--line-2);background:rgba(255,255,255,.03);font-family:var(--ff-display);font-weight:500}
+.khero .eyebrow::before{content:none}
+.khero .eyebrow .dot{background:var(--tail);box-shadow:0 0 12px var(--tail)}
+.khero h1,.chero h1,.doc-page h1{font-family:var(--ff-display);font-stretch:75%;font-weight:800;text-transform:uppercase;line-height:.9;letter-spacing:-.005em;
+  font-size:clamp(46px,8vw,124px);max-width:14ch;
+  background:linear-gradient(180deg,#FFFFFF 0%,#D9DCE0 38%,#7A808A 52%,#C4C8CE 70%,#F2F3F5 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.khero h1 .gold,.chero h1 .gold{-webkit-text-fill-color:transparent}
+.khero .lead{color:#BFC3CA;max-width:56ch}
+.doc-page h1{font-size:clamp(40px,6vw,88px);max-width:18ch}
+.doc-page h2{font-family:var(--ff-display);font-stretch:75%;font-weight:800;text-transform:uppercase;letter-spacing:.01em}
+.khero-bg .wm{font-family:var(--ff-display);font-stretch:75%;-webkit-text-stroke:1px rgba(201,205,211,.12)}
+.khero-bg .g1{background:radial-gradient(circle,rgba(212,162,76,.12),transparent 62%)}
+.khero-bg .g2{background:radial-gradient(circle,rgba(201,205,211,.07),transparent 64%)}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+
+/* заголовки карток і блоків — display-шрифт */
+.inner h3{font-family:var(--ff-display);font-stretch:75%;font-weight:800;text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
+.inner .faq-list h3,.inner .doc-body h3,.inner .safe-list h3{font-family:var(--ff-body);font-stretch:100%;font-weight:600;text-transform:none;letter-spacing:0;line-height:1.35}
+.adv-card h3{font-size:27px}
+.cl h3{font-size:30px}
+.step h3{font-size:27px}
+.adv-card .n,.cl .bud,.step .tag{font-family:var(--ff-display);color:var(--gold)}
+.adv-card{background:linear-gradient(180deg,var(--carbon-2),var(--carbon))}
+.adv-card::after{background:linear-gradient(90deg,var(--gold),var(--gold-hi))}
+.step .num{font-family:var(--ff-display);font-stretch:75%;-webkit-text-stroke:1.2px rgba(201,205,211,.35)}
+.step:hover .num{-webkit-text-stroke:1.2px var(--gold)}
+.chip{font-family:var(--ff-display);letter-spacing:.1em;text-transform:uppercase;border-color:var(--line-2)}
+.safe-list .ic,.ci .ic{font-family:var(--ff-display)}
+.safe-list li b{font-family:var(--ff-display);font-stretch:75%;font-weight:700;text-transform:uppercase;font-size:20px;letter-spacing:.01em}
+
+/* FAQ на всю ширину */
+.faq .faq-list{max-width:980px}
+
+/* SEO-текст */
+.seo-text h2{font-family:var(--ff-display);font-stretch:75%;font-weight:800;text-transform:uppercase;font-size:clamp(26px,3vw,36px);color:var(--bone);margin-bottom:14px;line-height:1}
+.seo-text p{margin-bottom:14px}
+.seo-text a{color:var(--gold-hi);text-decoration:underline;text-underline-offset:3px}
+
+/* блок заявки */
+.cta{background:radial-gradient(70% 90% at 85% 20%,rgba(212,162,76,.09),transparent 60%),var(--carbon);border-top:1px solid var(--line)}
+.cta h2{font-family:var(--ff-display);font-stretch:75%;font-weight:800;text-transform:uppercase;font-size:clamp(34px,4.4vw,64px);line-height:.92;letter-spacing:-.005em}
+.cta .sec-tag{display:flex}
+.cta p.big{color:#B6BAC1}
+.ci .ic{border-color:var(--line-2);color:var(--gold)}
+.ci a,.ci span{font-family:var(--ff-display);font-weight:600;letter-spacing:.02em}
+.ok h3{font-family:var(--ff-display);font-stretch:75%;font-weight:800;font-size:30px;text-transform:uppercase;margin-bottom:8px}
+
+@media (max-width:640px){
+  .crumbs{padding-top:96px}
+  .khero h1{font-size:clamp(40px,12.5vw,64px)}
+  .adv-card h3,.cl h3,.step h3{font-size:24px}
+}

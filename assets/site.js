@@ -24,14 +24,18 @@
   }
 
   /* поява блоків при скролі */
-  var rv = document.querySelectorAll('.rv, .office');
+  var rv = document.querySelectorAll('.rv, .home .office');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    rv.forEach(function (el) { io.observe(el); });
+    rv.forEach(function (el) {
+      // те, що вже на екрані, показуємо одразу, не чекаючи спостерігача
+      if (el.getBoundingClientRect().top < innerHeight) el.classList.add('in');
+      else io.observe(el);
+    });
   } else {
     rv.forEach(function (el) { el.classList.add('in'); });
   }
